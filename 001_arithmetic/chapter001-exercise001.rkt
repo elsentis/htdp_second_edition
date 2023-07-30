@@ -3,7 +3,7 @@
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname |;chapter1-exercise1|) (read-case-sensitive #t) (teachpacks ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "universe.rkt" "teachpack" "2htdp") (lib "image.rkt" "teachpack" "2htdp")) #f)))
 ; chapter001-exercise001
 
-; A:
+; Q:
 ; Write down an expression that computes the distance of this point to the origin, that is, a point with the coordinates (0,0).
 
 (define x 3)
