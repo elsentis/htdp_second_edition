@@ -18,10 +18,10 @@
                  (make-posn (/ WIDTH 20) (/ WIDTH 10)))
            "solid"
            "black"))
-(define MISSILE_OBJECT_DETECTION_ZONE 1)
+(define MISSILE-OBJECT-DETECTION-ZONE 1)
 
 (define UFO (overlay (circle (/ WIDTH 30) "solid" "green") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "green")))
-(define WIN_UFO (overlay (circle (/ WIDTH 30) "solid" "red") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "red")))
+(define WIN-UFO (overlay (circle (/ WIDTH 30) "solid" "red") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "red")))
 (define UFO-LAND-LEVEL (- (- HEIGHT (* (image-height UFO) 0.5 )) 1))
 
 (define TANK-HEIGHT (/ HEIGHT 30))
@@ -113,7 +113,7 @@
 (define (missile-hit? s-ufo s-missile)
   (cond [(<= (sqrt (+ (sqr (- (posn-x s-ufo) (posn-x s-missile)))
                       (sqr (- (posn-y s-ufo) (posn-y s-missile)))))
-             MISSILE_OBJECT_DETECTION_ZONE) #true]
+             MISSILE-OBJECT-DETECTION-ZONE) #true]
         [else #false]))
 
 
@@ -179,7 +179,7 @@
 ; adds red-ufo to the given image im
 
 (define (red-ufo-render m im)
-  (place-image WIN_UFO (posn-x m) (posn-y m) im))
+  (place-image WIN-UFO (posn-x m) (posn-y m) im))
 
 
 
