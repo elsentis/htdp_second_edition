@@ -21,7 +21,7 @@
            "black"))
 
 (define UFO (overlay (circle (/ WIDTH 30) "solid" "green") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "green")))
-(define WIN_UFO (overlay (circle (/ WIDTH 30) "solid" "red") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "red")))
+(define WIN-UFO (overlay (circle (/ WIDTH 30) "solid" "red") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "red")))
 
 (define TANK-HEIGHT (/ HEIGHT 30))
 (define TANK-Y-LEVEL (- (- HEIGHT (* TANK-HEIGHT 0.5 )) 1))
@@ -53,7 +53,7 @@
 (define SKETCH-4
   (place-image (text "you lose" (/ WIDTH 10) "red") (- (/ WIDTH 1) (image-width (text "you lose" (/ WIDTH 10) "red"))) (/ (image-height (text "you lose" (/ WIDTH 10) "red")) 2)
                 (place-image TANK (/ WIDTH 3) TANK-Y-LEVEL
-                             (place-image WIN_UFO (/ WIDTH 10) (- (- HEIGHT (* (image-height WIN_UFO) 0.5 )) 1)
+                             (place-image WIN-UFO (/ WIDTH 10) (- (- HEIGHT (* (image-height WIN-UFO) 0.5 )) 1)
                                           (place-image ROCKET (+ (/ WIDTH 4) 10) (/ (image-height (text "you lose" (/ WIDTH 10) "red")) 2) BACKGROUND)))))
                                           
 
