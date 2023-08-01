@@ -94,7 +94,6 @@
 ;               (missile-render (fired-missile s)
 ;                               BACKGROUND)))
 ; When do the two expressions produce the same result?
-
-
+;
 ; the same result
 ; when objects UFO and TANK do not intersect, do not collide with each other in space
