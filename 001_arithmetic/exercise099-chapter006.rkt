@@ -121,15 +121,17 @@
 (define (si-move-ufo s-ufo)
   (make-posn
    (cond
+     [(> (si-move-proper (posn-y s-ufo) UFO-DESCENT-VELOCITY) UFO-LAND-LEVEL)
+      (posn-x s-ufo)]
      [(<= (si-move-proper (posn-x s-ufo) (- UFO-X-VELOCITY)) (image-width UFO))
       (si-move-proper (posn-x s-ufo) UFO-X-VELOCITY)]
-     [(<= (si-move-proper (posn-x s-ufo) UFO-X-VELOCITY) (- WIDTH (image-width UFO)))
+     [(>= (si-move-proper (posn-x s-ufo) UFO-X-VELOCITY) UFO-LAND-LEVEL)
       (si-move-proper (posn-x s-ufo) (- UFO-X-VELOCITY))]
      [else (si-move-random (posn-x s-ufo) UFO-X-VELOCITY)])
    (cond
-     [(>= (si-move-proper (posn-y s-ufo) UFO-DESCENT-VELOCITY) (- HEIGHT (image-width UFO)))
-      (- HEIGHT (image-width UFO))]
-     [else (si-move-proper (posn-y s-ufo) (- UFO-DESCENT-VELOCITY))])))
+     [(>= (si-move-proper (posn-y s-ufo) UFO-DESCENT-VELOCITY) UFO-LAND-LEVEL)
+      UFO-LAND-LEVEL]
+     [else (si-move-proper (posn-y s-ufo) UFO-DESCENT-VELOCITY)])))
 
 
 
