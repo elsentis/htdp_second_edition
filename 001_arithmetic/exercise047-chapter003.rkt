@@ -10,11 +10,11 @@
 (define H-LOW-LIMIT 0)
 (define H-MAX-LIMIT 100)
 
-(define WIDTH   H-MAX-LIMIT ) 
+(define WIDTH   (* 10 H-MAX-LIMIT)) ;multiply by 10 for scale scalability
 (define HEIGHT 100)
 (define BACKGROUND (empty-scene WIDTH HEIGHT))
 
-(define DECREASE-H-PER-TOCK (/ WIDTH 10000))
+(define DECREASE-H-PER-TOCK (/ H-MAX-LIMIT 1000))
 (define COEFFICIENT-FOR-UP-KEY (/ 1 3))
 (define COEFFICIENT-FOR-DOWN-KEY (/ 1 5))
 
@@ -62,7 +62,7 @@
 (define (render hap)
   (overlay/align "left"
                  "middle"
-                 (rectangle (* 10 hap) HEIGHT "solid" "red")
+                 (rectangle (* 10 hap) HEIGHT "solid" "red") ;multiply by 10 for scale scalability
                  BACKGROUND))
 
 
@@ -75,6 +75,3 @@
 (define (end? hap)
   (cond [(<= hap H-LOW-LIMIT) #true]
         [else #false])) 
-
-
-(gauge-prog 50)
