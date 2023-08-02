@@ -14,7 +14,7 @@
 
 (define cat1 (bitmap/file "./images/cat1.png"))
 (define Y-LEVEL-CAT (- HEIGHT (/ (image-height cat1) 2) 1))
-(define INCREASE_X_PER_TOCK (/ WIDTH 300))
+(define INCREASE-X-PER-TOCK (/ WIDTH 300))
 
 
 ; cat-prog func
@@ -38,11 +38,11 @@
 
 ; Number -> Number
 ; tock func for BB
-; given 0, expected (+ 0 INCREASE_X_PER_TOCK)
-; given 100, expected (+ 100 INCREASE_X_PER_TOCK)
+; given 0, expected (+ 0 INCREASE-X-PER-TOCK)
+; given 100, expected (+ 100 INCREASE-X-PER-TOCK)
 
 (define (tock ws)
-  (modulo (round (+ ws INCREASE_X_PER_TOCK)) WIDTH))
+  (modulo (round (+ ws INCREASE-X-PER-TOCK)) WIDTH))
 
 
 
