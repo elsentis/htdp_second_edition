@@ -75,7 +75,7 @@
 
 (check-expect (si-control SI1 "right") SI1)
 (check-expect (si-control SI1 "left") (make-aim (make-posn 100 100) (make-tank 100 -3)))
-(check-expect (si-control SI1 "space") (make-fired (make-posn 100 100) (make-tank 100 3) (make-posn 100 MISSILE-START-Y-LEVEL)))
+(check-expect (si-control SI1 " ") (make-fired (make-posn 100 100) (make-tank 100 3) (make-posn 100 MISSILE-START-Y-LEVEL)))
 
 (define (si-control s ke)
   (cond
