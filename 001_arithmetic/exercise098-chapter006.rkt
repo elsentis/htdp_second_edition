@@ -141,7 +141,7 @@
        [(missile-hit? (fired-ufo s) (fired-missile s))
         (win-text-render (star-fire-render (fired-ufo s) (fired-missile s) (missile-render (fired-missile s) (tank-render (fired-tank s)
                   (ufo-render (fired-ufo s) BACKGROUND)))))]
-       [else (lose-text-render (missile-render (fired-missile s) (tank-render (aim-tank s)
+       [else (lose-text-render (missile-render (fired-missile s) (tank-render (fired-tank s)
                   (red-ufo-render (fired-ufo s) BACKGROUND))))])]))
 
 
