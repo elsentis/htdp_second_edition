@@ -107,8 +107,9 @@
     (posn-x (aim-ufo s))
     (posn-y (aim-ufo s)))
    (si-tank-update-dir-keys (aim-tank s) ke))]
-    [(string=? ke "space")
-     (si-missile-appear s)]))
+    [(string=? ke " ")
+     (si-missile-appear s)]
+    [else s]))
 
 
 
