@@ -18,7 +18,7 @@
                  (make-posn (/ WIDTH 20) (/ WIDTH 10)))
            "solid"
            "black"))
-(define MISSILE-OBJECT-DETECTION-ZONE 1)
+(define MISSILE-OBJECT-DETECTION-ZONE (/ WIDTH 20))
 
 (define UFO (overlay (circle (/ WIDTH 30) "solid" "green") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "green")))
 (define WIN-UFO (overlay (circle (/ WIDTH 30) "solid" "red") (rectangle (/ WIDTH 10) (/ WIDTH 100) "solid" "red")))
