@@ -76,7 +76,7 @@
 
 
 ; we use X-coord to represent a location coordinate of cat image 
-; X-coord, Number, Number -> X-coord
+; X-coord -> X-coord
 ; aux func for tock for change X-cord
 
 ;(check-expect (aux-tock-x 0) (modulo (round (+ 0 CAT-X-INCREASE-PER-TOCK)) WIDTH))
@@ -88,7 +88,7 @@
 
 
 ; we use H to represent a scale with gauge happiness 
-; Number -> Number
+; X-coord -> X-coord
 ; func for tock for change hap
 
 (define (aux-tock-h hap)
@@ -160,7 +160,7 @@
 
 ; we use H to represent a scale with gauge happiness 
 ; H -> boolean
-; determine the end of animate from mane
+; determine the end of animate from main
 ; when the happiness drops to 0
 
 ;(check-expect (end? 1000) #false)
