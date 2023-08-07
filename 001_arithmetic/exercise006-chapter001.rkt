@@ -6,7 +6,7 @@
 ; Q.:
 ; Create an expression that counts the number of pixels in the image
 
-(define cat1 (bitmap "./cat.png"))
+(define cat1 (bitmap "./images/cat1.png"))
 
 (* (image-width cat) (image-height cat))
 
