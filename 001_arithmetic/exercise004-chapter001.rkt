@@ -11,7 +11,7 @@
 (define str "helloworld")
 (define i 1)
 
-(string-append (substring str 0 (- i 1)) (substring str i))
+(string-append (substring str 0 i) (substring str (+ i 1)))
 
 ; Which values for i are legitimate?
 ; from 1 to (string-length str) 
