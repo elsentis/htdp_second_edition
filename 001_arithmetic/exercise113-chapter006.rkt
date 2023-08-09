@@ -108,6 +108,11 @@
 ; – a VCat
 ; – a VCham
 
+
+
+; Any -> Boolean
+; is a an element of the Vanimal collection
+
 ;(check-expect (vanimal? (make-vcat 120 90 "right")) #true)
 ;(check-expect (vanimal? (make-vcham 100 150 "right" "green")) #true)
 ;(check-expect (vanimal? (make-posn 10 10)) #false)
