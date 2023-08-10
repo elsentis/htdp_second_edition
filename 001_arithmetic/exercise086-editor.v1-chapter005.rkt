@@ -16,6 +16,7 @@
 (define SCENE-SIZE-TEXT 11)
 (define SCENE-COLOR-TEXT "black")
 (define SCENE-CURSOR (rectangle 1 SCENE-HEIGHT "solid" "red"))
+(define SCENE-INDENT-FROM-RIGHT-BORDER (+ (image-width SCENE-CURSOR) 5))
 
 (define-struct editor [pre post])
 ; An Editor is a structure:
@@ -85,7 +86,7 @@
 ;(check-expect (aux-edit-right-margin (make-editor "hello" "world") 200 11) #f)
 
 (define (aux-edit-right-margin ed)
-  (cond [(<= 5 (- SCENE-WIDTH (image-width (text (string-append (editor-pre ed) (editor-post ed)) SCENE-SIZE-TEXT SCENE-COLOR-TEXT))))  #false]
+  (cond [(<= SCENE-INDENT-FROM-RIGHT-BORDER (- SCENE-WIDTH (image-width (text (string-append (editor-pre ed) (editor-post ed)) SCENE-SIZE-TEXT SCENE-COLOR-TEXT))))  #false]
         [else #true]))
 
 
