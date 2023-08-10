@@ -50,9 +50,10 @@
 ;(check-expect (aux-edit-backpace (make-editor "hello " "world")) (make-editor "hello" "world"))
 
 (define (aux-edit-backpace ed)
-  (make-editor
-   (string-last-delete (editor-pre ed))
-   (editor-post ed)))
+  (cond [(> (string-length (editor-pre ed)) 0) (make-editor
+                                                (string-last-delete (editor-pre ed))
+                                                (editor-post ed))]
+        [else ed]))
 
 
 
@@ -75,10 +76,11 @@
 ;(check-expect (aux-edit-left (make-editor "hello " "world")) (make-editor "hello" " world"))
 
 (define (aux-edit-left ed)
-  (make-editor
-   (string-last-delete (editor-pre ed))
-   (string-append (string-ith (editor-pre ed) (- (string-length (editor-pre ed)) 1))
-                  (editor-post ed))))
+  (cond [(> (string-length (editor-pre ed)) 0)
+         (make-editor
+          (string-last-delete (editor-pre ed))
+          (string-append (string-ith (editor-pre ed) (- (string-length (editor-pre ed)) 1)) (editor-post ed)))]
+        [else ed]))
 
 
 
@@ -91,8 +93,10 @@
 (define (aux-edit-right ed)
   (make-editor
    (string-append (editor-pre ed)
-                  (string-ith (editor-post ed) 0))
-   (substring (editor-post ed) 1)))
+                  (cond [( > (string-length (editor-post ed)) 0) (string-ith (editor-post ed) 0)]
+                        [else ""]))
+   (cond [( > (string-length (editor-post ed)) 0) (substring (editor-post ed) 1)]
+         [else (editor-post ed)])))
 
 
 
