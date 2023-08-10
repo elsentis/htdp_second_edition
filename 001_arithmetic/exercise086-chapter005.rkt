@@ -131,8 +131,6 @@
                   
 
 
-
-
 ; we use editor to represent text string
 ; Editor -> Editor
 ; aux func for edit , for handle condition "right" from ke
