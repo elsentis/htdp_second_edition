@@ -20,7 +20,7 @@
 
 (define-struct person [name hair eyes phone])
 
-; (define p-1 (make-person "ivan" "black" "brown" "222")) ;; constructor
+; (define p-1 (make-person "ivan" "black" "brown" 222)) ;; constructor
 ; (person-name p-1) ;; selector
 ; (person-hair p-1) ;; selector
 ; (person-eyes p-1) ;; selector
