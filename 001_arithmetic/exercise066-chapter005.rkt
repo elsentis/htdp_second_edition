@@ -17,8 +17,8 @@
 
 (define-struct person [name hair eyes phone])
 
-(define person1 (make-person "ivan" "black" "brown" "222"))
-(define person2 (make-person "denis" "white" "blue" "420"))
+(define person1 (make-person "ivan" "black" "brown" 222))
+(define person2 (make-person "denis" "white" "blue" 420))
 
 
 
