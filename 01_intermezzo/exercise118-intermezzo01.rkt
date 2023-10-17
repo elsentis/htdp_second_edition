@@ -13,9 +13,7 @@
 ; f, x is a variable
 ; expr = variable
 ; def = (define (variable variable variable ...) expr)
-; compound sentence with define keyword in this form meaning defining a function named f
-; function f consume an argument with a x value and return a x value
-; function does not perform any calculations with the argument
+
 
 
 ; (define (f x) y)
@@ -23,9 +21,7 @@
 ; f, x, y is a variable
 ; expr = variable
 ; def = (define (variable variable variable ...) expr)
-; compound sentence with define keyword in this form meaning defining a function named f
-; function f consume an argument with a x value and return a y value
-; function does not perform any calculations with the argument
+
 
 
 ; (define (f x y) 3)
@@ -35,6 +31,3 @@
 ; 3 is a number
 ; number is a value
 ; def = (define (variable variable variable ...) expr)
-; compound sentence with define keyword in this form meaning defining a function named f
-; function f consume a two arguments with x and y value and return literal constants - value as number 3
-; function does not perform any calculations with the arguments
