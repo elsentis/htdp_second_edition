@@ -38,6 +38,6 @@
 ; number is a value
 ; expr = value
 ; '+' is a primitive
-; because expr = (primitive expr expr ...)
+; because expr == (primitive expr expr ...)
 ; (+ 1 2 3) == (primitive expr expr expr) == expr
 ; legal
