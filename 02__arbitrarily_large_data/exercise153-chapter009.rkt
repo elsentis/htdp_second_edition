@@ -28,18 +28,18 @@
 
 ; A Lext-X fall in interval:
 ; - 0 to SQUARE-HALL-X
-; interpretation the 
+
 
 ; A Lext-Y fall in interval:
 ; - 0 to SQUARE-HALL-Y
 
 ; A Lect-Posn is a structure:
-;  (make-posn Lect-x 10 Lect-y)
+;  (make-posn Lect-x Lect-y)
 ; interpretation the range of points available for throwing the ball is within Lecture-hall
 
 ;; An List-of-Lect-Posns is one of:
 ;; -  '()
-;; - (cons Boolean List-of-Lect-Posns)
+;; - (cons Lect-Posn List-of-Lect-Posns)
 (define list-of-dots-1 (cons (make-posn 6 4)
                              (cons (make-posn 3 6)
                                    (cons (make-posn 6 8) '()))))
