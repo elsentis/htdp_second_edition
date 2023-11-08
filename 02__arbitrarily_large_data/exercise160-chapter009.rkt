@@ -24,16 +24,29 @@
 ; 
 ; Constraint If s is a Son.R, 
 ; no number occurs twice in s
+(define s1.R (cons 1 '()))
 
 
 ; Number Son.L -> Son.L
 ; add x to s 
 ;
-(check-expect (set+.L 1 s1.L) es)
+;(check-satisfied (set+.L 3 s1.L) contain-l?)
 ;
 (define (set+.L x s)
   (append (cons x '()) s))
-
+; 
 ; check contain x in s
-(define (contain? x s)
-  (
+(define (contain-l? s)
+  (member? 3 s))
+
+
+; Number Son.R -> Son.R
+; add x to s 
+;
+;(check-expect (set+.R 1 s1.R) s1.R)
+;(check-expect (set+.R 3 s1.R) (cons 3 (cons 1 '())))
+;
+(define (set+.R x s)
+  (cond
+    [(member? x s) s]
+    [else (append (cons x '()) s)]))
