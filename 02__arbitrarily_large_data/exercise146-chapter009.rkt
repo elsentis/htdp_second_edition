@@ -15,6 +15,7 @@
 ; interpretation non-empty lists of Celsius temperatures
 
 (define ABSOLUTE0 -272)
+
 ; A CTemperature is a Number greater than ABSOLUTE0.
 
 

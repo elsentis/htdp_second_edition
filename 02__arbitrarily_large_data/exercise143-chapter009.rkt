@@ -5,7 +5,8 @@
 
 ; Q.:
 ; Determine how average behaves in DrRacket when applied to the empty list.
-; Then design checked-average, a function that produces an informative error message when it is applied to '().
+; Then design checked-average,
+; a function that produces an informative error message when it is applied to '().
 
 
 ; A List-of-temperatures is one of: 
@@ -13,6 +14,7 @@
 ; – (cons CTemperature List-of-temperatures)
  
 (define ABSOLUTE0 -272)
+
 ; A CTemperature is a Number greater than ABSOLUTE0.
 
 

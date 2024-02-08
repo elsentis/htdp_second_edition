@@ -4,8 +4,10 @@
 ; exercise144-chapter009
 
 ; Q.:
-; Will sum and how-many work for NEList-of-temperatures even though they are designed for inputs from List-of-temperatures?
-; If you think they don’t work, provide counter-examples. If you think they would, explain why.
+; Will sum and how-many work for NEList-of-temperatures
+; even though they are designed for inputs from List-of-temperatures?
+; If you think they don’t work, provide counter-examples.
+; If you think they would, explain why.
 
 
 ; An NEList-of-temperatures is one of: 
@@ -14,6 +16,7 @@
 ; interpretation non-empty lists of Celsius temperatures 
  
 (define ABSOLUTE0 -272)
+
 ; A CTemperature is a Number greater than ABSOLUTE0.
 
 
@@ -53,10 +56,13 @@
 
 
 ; Q.:
-; Will sum and how-many work for NEList-of-temperatures even though they are designed for inputs from List-of-temperatures?
+; Will sum and how-many work for NEList-of-temperatures
+; even though they are designed for inputs from List-of-temperatures?
 ; If you think they don’t work, provide counter-examples. If you think they would, explain why.
 ;
 ; A.:
-; Yes, sum and how-many work for NEList-of-temperatures because all elements of the NEList-of-temperatures
-; are also non-empty elements of List-of-temperatures (subset) and this functions defined to process a wider range of data
+; Yes, sum and how-many work for NEList-of-temperatures
+; because all elements of the NEList-of-temperatures
+; are also non-empty elements of List-of-temperatures (subset)
+; and this functions defined to process a wider range of data
 ; than NEList-of-temperatures

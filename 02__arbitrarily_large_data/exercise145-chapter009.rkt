@@ -4,8 +4,10 @@
 ; exercise145-chapter009
 
 ; Q.:
-; Design the sorted>? predicate, which consumes a NEList-of-temperatures and produces #true if the temperatures are sorted in descending order.
-; That is, if the second is smaller than the first, the third smaller than the second, and so on. Otherwise it produces #false.
+; Design the sorted>? predicate, which consumes a NEList-of-temperatures
+; and produces #true if the temperatures are sorted in descending order.
+; That is, if the second is smaller than the first, the third smaller than the second, and so on.
+; Otherwise it produces #false.
 
 
 
@@ -15,12 +17,14 @@
 ; interpretation non-empty lists of Celsius temperatures
 
 (define ABSOLUTE0 -272)
+
 ; A CTemperature is a Number greater than ABSOLUTE0.
 
 
 
 ; NEList-of-temperatures -> Boolean
-; consumes a NEList-of-temperatures and produces #true if the temperatures are sorted in descending order
+; consumes a NEList-of-temperatures
+; and produces #true if the temperatures are sorted in descending order
 ; #false otherwise
 ;
 ;        l        (first l)        (rest l)        (sorted>? (rest l))        (sorted>? l)
