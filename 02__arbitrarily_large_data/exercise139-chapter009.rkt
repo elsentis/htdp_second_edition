@@ -25,9 +25,9 @@
 ; Design the function pos?, which consumes a List-of-numbers and determines whether all numbers are positive numbers.
 ; In other words, if (pos? l) yields #true, then l is an element of List-of-amounts. Use DrRacket’s stepper to understand how pos? works for (cons 5 '()) and (cons -1 '()).
 
-; (how-many.v2 (cons '())) == #true
-; (how-many.v2 (cons 10 (cons 20 '()))) == #true
-; (how-many.v2 (cons 10 (cons -20 '()))) == #false
+; (pos? (cons '())) == #true
+; (pos? (cons 10 (cons 20 '()))) == #true
+; (pos? (cons 10 (cons -20 '()))) == #false
 
 ;(check-expect (pos? '()) #true)
 ;(check-expect (pos? (cons 10 (cons 20 '()))) #true)
@@ -41,6 +41,29 @@
     [(cons? alon) (cond
                     [(> (first alon) 0) (pos? (rest alon))]
                     [else #false])]))
+
+
+; A List-of-amounts is one of: 
+; – '()
+; – (cons PositiveNumber List-of-amounts)
+
+; List-of-amounts -> PositiveNumber
+; computes the sum of the amounts
+
+; (how-many.v2 test-loa-1) == 50
+; (how-many.v2 test-loa-2) == 2
+; (how-many.v2 '()) == 0
+
+; (check-expect (how-many.v2 test-loa-1) 50)
+; (check-expect (how-many.v2 test-loa-2) 2)
+; (check-expect (how-many.v2 '()) 0)
+
+(define (how-many.v2 aloa)
+  (cond
+    [(empty? aloa) 0]
+    [(cons? aloa) (+
+                   (first aloa)
+                   (how-many.v2 (rest aloa)))]))
 
 
 ; Q.:
@@ -63,10 +86,7 @@
 ;
 (define (checked-sum alon)
   (cond
-    [(pos? alon)
-     (cond
-       [(empty? alon) 0]
-       [else (+ (first alon) (checked-sum (rest alon)))])]
+    [(pos? alon) (how-many.v2 alon)]
     [else (error 'checked-sum "negative numbers in the list")]))
 
 
