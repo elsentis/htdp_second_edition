@@ -23,6 +23,9 @@
 ; – (cons Los LN)
 ; interpretation a list of lines, each is a list of Strings
 
+
+(define articles-keeper (cons "a" (cons "an" (cons "the" '()))))
+
 (define line0 (cons "a" (cons "world" '())))
 (define line1 '())
 (define line2 (cons "the" (cons "world" (cons "an" (cons "big" (cons "hope" '()))))))
@@ -34,8 +37,8 @@
 ;
 (define (remove-articles f)
   (if (file-exists? f)
-      (aux-remove-articles-file (read-words/line f))
-      ((error "file doesn't exist"))))
+      (write-file (string-append "no-articles-" f) (aux-remove-articles-file (read-words/line f)))
+      (error "file doesn't exist")))
 
 
 ; LN -> String
@@ -43,8 +46,33 @@
 ; convert a list of lines into a string with removed articles
 ;
 (check-expect (aux-remove-articles-file (cons line1 (cons line2 '())))
-              ("\nworld big hope \n"))
+              "\nworld big hope\n")
 (check-expect (aux-remove-articles-file (cons line0 (cons line2 '())))
-              ("world\n world big hope \n"))
+              "world\nworld big hope\n")
 (check-expect (aux-remove-articles-file (cons line1 '()))
-              ("\n"))
+              "\n")
+;
+(define (aux-remove-articles-file lls)
+  (cond
+    [(empty? lls) ""]
+    [else
+     (string-append (aux-remove-articles-string (first lls))
+                    (aux-remove-articles-file (rest lls)))]))
+
+
+; Los -> String
+; aux func for remove-articles
+; for processing a single line
+; and deleting a given article
+;
+(check-expect (aux-remove-articles-string line0) "world\n")
+(check-expect (aux-remove-articles-string line1) "\n")
+(check-expect (aux-remove-articles-string line2) "world big hope\n")
+;
+(define (aux-remove-articles-string los)
+  (cond
+    [(empty? los) "\n"]
+    [else
+     (string-append (if (member? (first los)articles-keeper) "" (first los))
+                    (if (or (empty? (rest los)) (member? (first los)articles-keeper)) "" " ")
+                    (aux-remove-articles-string (rest los)))]))
