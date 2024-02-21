@@ -83,3 +83,5 @@
      (string-append (if (member? (first los)articles-keeper) "" (first los))
                     (if (or (empty? (rest los)) (member? (first los)articles-keeper)) "" " ")
                     (aux-remove-articles-string (rest los)))]))
+
+https://habr.com/ru/articles/794963/
