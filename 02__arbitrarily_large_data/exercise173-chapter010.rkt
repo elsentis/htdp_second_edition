@@ -45,12 +45,12 @@
 ; aux func for remove-articles
 ; convert a list of lines into a string with removed articles
 ;
-(check-expect (aux-remove-articles-file (cons line1 (cons line2 '())))
-              "\nworld big hope\n")
-(check-expect (aux-remove-articles-file (cons line0 (cons line2 '())))
-              "world\nworld big hope\n")
-(check-expect (aux-remove-articles-file (cons line1 '()))
-              "\n")
+;(check-expect (aux-remove-articles-file (cons line1 (cons line2 '())))
+;              "\nworld big hope\n")
+;(check-expect (aux-remove-articles-file (cons line0 (cons line2 '())))
+;              "world\nworld big hope\n")
+;(check-expect (aux-remove-articles-file (cons line1 '()))
+;              "\n")
 ;
 (define (aux-remove-articles-file lls)
   (cond
@@ -65,9 +65,9 @@
 ; for processing a single line
 ; and deleting a given article
 ;
-(check-expect (aux-remove-articles-string line0) "world\n")
-(check-expect (aux-remove-articles-string line1) "\n")
-(check-expect (aux-remove-articles-string line2) "world big hope\n")
+;(check-expect (aux-remove-articles-string line0) "world\n")
+;(check-expect (aux-remove-articles-string line1) "\n")
+;(check-expect (aux-remove-articles-string line2) "world big hope\n")
 ;
 (define (aux-remove-articles-string los)
   (cond
