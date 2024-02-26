@@ -12,6 +12,9 @@
 ; Study the data definition and translate the two-by-two matrix consisting of the numbers
 ; 11, 12, 21, and 22 into this data representation.
 ; Stop, don’t read on until you have figured out the data examples.
+; Even though you lack definitions for these functions, you should be able to understand how transpose works.
+; You should also understand that you cannot design this function with the design recipes you have seen so far. Explain why.
+; Design the two wish-list functions. Then complete the design of transpose with some test cases.
 
 
 ; A Matrix is one of: 
@@ -78,3 +81,21 @@
   (cond
     [(empty? m) '()]
     (else (cons (rest (first m)) (rest* (rest m))))))
+
+
+; Q.:
+; Even though you lack definitions for these functions,
+; you should be able to understand how transpose works.
+; You should also understand that you cannot design this function
+; with the design recipes you have seen so far. Explain why.
+
+
+; A.:
+; Fucntion transpose process input item (self-referential data type)
+; not according to the design recipe for this type of data,
+; which requires sequentially match each recognizing condition to the corresponding clause
+; in the data definition.
+; Instead, transpose function, with the help of auxiliary functions first* and rest*,
+; processes items of the input list using the recursion algorithm
+; returning from the same element every iteration
+; (while the recipe requires processing each element at once)
