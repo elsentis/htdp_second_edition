@@ -1,0 +1,20 @@
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\bin\Debug\PTicTacToe.exe.config
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\bin\Debug\PTicTacToe.exe
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\bin\Debug\PTicTacToe.pdb
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.csprojAssemblyReference.cache
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.Form1.resources
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.Properties.Resources.resources
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.csproj.GenerateResource.cache
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.csproj.CoreCompileInputs.cache
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.exe
+F:\Teach\Программирование\dl_OOP\04Delegate\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.pdb
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\bin\Debug\PTicTacToe.exe.config
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\bin\Debug\PTicTacToe.exe
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\bin\Debug\PTicTacToe.pdb
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.csproj.AssemblyReference.cache
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.Form1.resources
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.Properties.Resources.resources
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.csproj.GenerateResource.cache
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.exe
+C:\Users\gladyshevaa\Documents\_auto\c sharp\PTicTacToe\PTicTacToe\obj\Debug\PTicTacToe.pdb
