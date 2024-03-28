@@ -70,14 +70,15 @@ namespace PTicTacToe
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.Enabled = false;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblStatus.ForeColor = System.Drawing.Color.Maroon;
             this.lblStatus.Location = new System.Drawing.Point(140, 7);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(41, 13);
+            this.lblStatus.Size = new System.Drawing.Size(39, 13);
             this.lblStatus.TabIndex = 2;
-            this.lblStatus.Text = "label1";
+            this.lblStatus.Text = "Инфо";
             // 
             // tableLayoutPanel1
             // 
@@ -178,6 +179,7 @@ namespace PTicTacToe
             // 
             // button
             // 
+            this.button.BackColor = System.Drawing.SystemColors.Control;
             this.button.FlatAppearance.BorderSize = 5;
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -185,7 +187,7 @@ namespace PTicTacToe
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(69, 61);
             this.button.TabIndex = 0;
-            this.button.UseVisualStyleBackColor = true;
+            this.button.UseVisualStyleBackColor = false;
             this.button.Click += new System.EventHandler(this.button_Click);
             // 
             // button2
@@ -235,7 +237,6 @@ namespace PTicTacToe
 
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.Button button9;
@@ -246,6 +247,7 @@ namespace PTicTacToe
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        internal System.Windows.Forms.Label lblStatus;
     }
 }
 
